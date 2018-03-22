@@ -1,6 +1,6 @@
 from tttBoard import tttBoard
 
-# todo: handle inputs kappa
+# todo: handle inputs
 # todo: base game loop and player prompts
 # todo: randomizing who goes first and attributing win accordingly
 
