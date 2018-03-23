@@ -1,5 +1,3 @@
-
-
 class ConsoleOutput:
 
     def welcome(self):
