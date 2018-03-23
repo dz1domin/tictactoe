@@ -13,22 +13,6 @@ class TicTacToeBoard:
     def get_dim(self):
         return self._dim
 
-    # to bym wrzucił do klasy output, w ten sposób board nie jest zależny od outputu
-    # który może być w konsoli, a równie dobrze w jakimś gui czy tym tcp
-    # def draw_board(self):
-    #     for i in range(self._dim):
-    #         if i != 0:
-    #             for k in range(self._dim - 1):
-    #                 print('--+', end='')
-    #             print('--')
-    #         for j in range(self._dim):
-    #             if j < self._dim - 1:
-    #                 print(''.join(self._board_state[i][j]), '|', end='')
-    #             else:
-    #                 print(''.join(self._board_state[i][j]))
-    #     else:
-    #         return True
-
     def set_point(self, x, y, character):
 
         if self._board_state[x][y] == ' ':

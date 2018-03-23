@@ -4,6 +4,7 @@ from ConsoleOutput import ConsoleOutput
 
 dim = 5     # you can change this value to check any board size >= 3
 
+
 class TestTicTacToeBoard(TestCase):
     def test_set_point_return_false_if_field_is_occupied(self):
         board = TicTacToeBoard(dim)
@@ -87,6 +88,5 @@ class TestTicTacToeBoard(TestCase):
                 for j in range(1, dim):
                     board.set_point(i, j, "X")
                     board.set_point(i + 1, j, "O")
-
 
         self.assertFalse(board.is_move_available())

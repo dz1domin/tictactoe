@@ -30,7 +30,6 @@ class Game:
         while not is_end:
             is_end = self.player_make_move()
 
-
     def player_get_move(self):
 
         self._output.player_move(self._actual_player)
