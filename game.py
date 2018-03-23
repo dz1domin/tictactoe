@@ -8,10 +8,18 @@ class Game:
     players = ['O', 'X']
 
     def __init__(self):
-        self._dim = 3
-        self._board = TicTacToeBoard(self._dim)
         self._input = ConsoleInput()
         self._output = ConsoleOutput()
+        self._output.ask_board_size()
+
+        dim = False
+        while not dim:
+            dim = self._input.board_size()
+            if not dim:
+                self._output.wrong_size()
+
+        self._dim = dim
+        self._board = TicTacToeBoard(self._dim)
         self._actual_player = choice(self.players)
 
     def start_game(self):

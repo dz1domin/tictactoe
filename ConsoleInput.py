@@ -12,3 +12,16 @@ class ConsoleInput:
             return coord
 
         return False
+
+    def board_size(self):
+        size = input()
+
+        try:
+            size = int(size)
+        except ValueError:
+            return False
+
+        if size >= 3:
+            return size
+
+        return False

@@ -3,12 +3,15 @@ from copy import deepcopy
 
 class TicTacToeBoard:
 
-    def __init__(self, dim):
+    def __init__(self, dim=3):
         self._dim = dim
         self._board_state = [[' ' for _ in range(self._dim)] for _ in range(self._dim)]
 
     def get_board_state(self):
         return deepcopy(self._board_state)
+
+    def get_dim(self):
+        return self._dim
 
     # to bym wrzucił do klasy output, w ten sposób board nie jest zależny od outputu
     # który może być w konsoli, a równie dobrze w jakimś gui czy tym tcp
